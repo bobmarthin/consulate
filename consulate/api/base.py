@@ -131,7 +131,8 @@ class Response(object):
                         except TypeError:
                             pass
                         try:
-                            row['Value'] = json.loads(row['Value'])
+                            #row['Value'] = json.loads(row['Value'])
+                            row['Value'] = row['Value']
                         except (TypeError, ValueError):
                             pass
             if isinstance(value, list) and len(value) == 1:
